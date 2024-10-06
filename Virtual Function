@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+class Employee{
+    public:
+    virtual void work(){
+        cout<<"Employee"<<endl;
+    }
+};
+class Manager:public Employee{
+    public:
+    void work() {
+        cout<<"Manager"<<endl;
+    }
+};
+class CEO:public Employee{
+    public:
+    void work()
+    {
+        cout<<"CEO"<<endl;
+    }
+};
+int main()
+{
+    Employee* e;
+    Manager man;
+    CEO ce;
+
+    e=&man;
+    e->work();
+
+    e=&ce;
+    e->work();
+    return 0;
+}
