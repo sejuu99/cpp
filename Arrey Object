@@ -1,0 +1,32 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+class MyString{
+    private:
+    char str[100];
+
+    public:
+    MyString(){
+        strcpy(str, "");
+    }
+    MyString(const char* s)
+    {
+        strcpy(str,s);
+    }
+    void display() {
+        cout<<str<<endl;
+    }
+};
+int main()
+{
+    MyString boys[3];
+    boys[1]=MyString("Hemant");
+    boys[2]=MyString("PD");
+    boys[3]=MyString("Harshraj");
+
+    for(int i=0;i<3;i++)
+    {
+        boys[i].display();
+    }
+}
