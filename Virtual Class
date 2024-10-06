@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+class AbstractAnimal {
+public:
+    // Pure virtual function
+    virtual void makeSound() = 0;  // = 0 makes it pure virtual
+
+    // Other common functionality (if needed)
+    void walk() {
+        cout << "Animal is walking..." << endl;
+    }
+};
+
+// Derived class implementing virtual class
+class Tiger : public AbstractAnimal {
+public:
+    void makeSound() {
+        cout << "Tiger roars: Roarrrr!" << endl;
+    }
+};
+int main()
+{
+    Tiger tiger;
+    tiger.makeSound();
+    tiger.walk(); 
+    return 0; 
+}
