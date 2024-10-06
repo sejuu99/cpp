@@ -1,0 +1,61 @@
+#include<iostream>
+using namespace std;
+class base
+{
+	private:
+		int no1;
+		int no2;
+	public:
+		base();
+		base(int,int);
+		void display();
+};
+base::base()
+{
+	no1=1;
+	no2=2;
+};
+base::base(int n1,int n2)
+{
+	no1=n1;
+	no2=n2;
+};
+void base::display()
+{
+	cout<<"No1:"<<no1<<endl;
+	cout<<"No2:"<<no2<<endl;
+};
+class derived:public base
+{
+	private:
+		int no3;
+		int no4;
+	public:
+		derived();
+		derived(int,int,int,int);
+	    void display();
+};
+derived::derived()
+{
+    no3=3;
+    no4=4;
+};
+derived::derived(int n1,int n2,int n3,int n4)
+{
+	no3=n3;
+	no4=n4;
+	
+};
+void derived::display()
+{
+	base::display();
+	cout<<"No3:"<<no3<<endl;
+	cout<<"No4:"<<no4<<endl;
+};
+int main()
+{
+	derived d1;
+	d1.display();
+	derived d2;
+	d2.display();
+}
