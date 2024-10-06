@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+class funover
+{
+ private:
+   
+ public:
+     void add();
+	 void add(int,int);
+	 void add(double,double);
+	 void add(int,double);
+	
+};
+void funover::add()
+{
+   int n1=10;
+   int 	n2=20;
+	cout<<"Addition ="<<n1+n2<<endl;
+
+};
+void funover::add(int a,int b)
+{
+
+	cout<<"Addition="<<a+b<<endl;
+}
+void funover::add(double d,double b)
+{
+	
+	cout<<"Addition ="<<d+b<<endl;
+}
+void funover::add(int n,double d)
+{
+	
+		cout<<"Addition ="<<n+d<<endl;
+	
+}
+int main()
+{
+	funover f;
+	f.add();
+	f.add(30,40);
+	f.add(10.5,5.3);
+	f.add(5,5.5);
+}
