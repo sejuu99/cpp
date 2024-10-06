@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+class base
+{
+	private:
+		int privatemember;
+	protected:
+		int protectedmember;
+	public:
+		base()
+		{
+			privatemember=10;
+			protectedmember=20;
+		}
+	friend void friendfunction(base& obj);
+};
+
+void friendfunction(base& obj)
+{
+	cout<<"Private Member is:"<<obj.privatemember<<endl;
+	cout<<"Protected Member is:"<<obj.protectedmember<<endl;
+};
+int main()
+{
+	base b1;
+	friendfunction(b1);
+}
