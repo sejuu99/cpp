@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+class one
+{
+	private:
+		int privatemember;
+	protected:
+		int protectedmember;
+	public:
+		one()
+		{
+		   privatemember=10;
+		   protectedmember=20;
+		}
+		
+	friend class two;
+};
+
+class two
+{
+	public:
+		void display(one& obj)
+		{
+			cout<<"Private Member is"<<obj.privatemember<<endl;
+			cout<<"Protected Member is"<<obj.protectedmember<<endl;
+		}
+};
+
+int main()
+{
+	one o1;
+	two t1;
+	t1.display(o1);
+	return 0;
+}
